@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>RENDZZ OTP - Layanan Nomor Virtual Premium & Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Tawk.to Live Chat -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6a2eecc1e2a6fe1d46ecac9a/1jr3kplij';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #0f0f2d 50%, #1a1a3e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        /* Animated Particles */
+        .bg-particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+        .particle { position: absolute; background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,140,0,0.05)); border-radius: 50%; animation: float 20s infinite ease-in-out; }
+        @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-80px) rotate(180deg); } }
+        
+        .container { max-width: 500px; margin: 0 auto; padding: 16px; position: relative; z-index: 1; }
+        
+        /* Swiper */
+        .swiper { width: 100%; border-radius: 24px; margin-bottom: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .swiper-slide img { width: 100%; height: 160px; object-fit: cover; }
+        .swiper-pagination-bullet { background: #FFD700; }
+        
+        /* Logo */
+        .logo-header { text-align: center; padding: 12px 0; }
+        .logo { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,215,0,0.3); }
+        .logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg, #FFD700, #FF8C00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; color: #0a0e27; box-shadow: 0 0 20px rgba(255,215,0,0.5); }
+        .logo-text { font-size: 20px; font-weight: 800; background: linear-gradient(135deg, #FFD700, #FF8C00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Info Grid */
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
+        .info-card { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)); backdrop-filter: blur(10px); border-radius: 20px; padding: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
+        .info-card:hover { transform: translateY(-3px); border-color: rgba(255,215,0,0.3); }
+        .info-icon { font-size: 28px; margin-bottom: 6px; }
+        .info-title { font-size: 11px; font-weight: 700; color: #FFD700; margin-bottom: 4px; }
+        .info-desc { font-size: 10px; color: rgba(255,255,255,0.6); }
+        
+        /* Panduan Bayar - KHUSUS di halaman QRIS */
+        .guide-section { background: linear-gradient(135deg, rgba(0,100,0,0.3), rgba(0,50,0,0.2)); border-radius: 24px; padding: 16px; margin-bottom: 16px; border: 1px solid rgba(0,255,0,0.2); }
+        .guide-title { font-size: 14px; font-weight: 700; color: #4caf50; text-align: center; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .guide-steps { display: flex; flex-direction: column; gap: 10px; }
+        .step-item { display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.3); border-radius: 16px; padding: 10px; font-size: 12px; }
+        .step-number { width: 28px; height: 28px; background: #4caf50; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff; }
+        .step-text { flex: 1; color: rgba(255,255,255,0.9); }
+        .step-text i { color: #4caf50; margin-right: 5px; }
+        
+        /* Feature Section */
+        .feature-section { background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)); border-radius: 24px; padding: 16px; margin-bottom: 16px; border: 1px solid rgba(255,215,0,0.15); }
+        .feature-title { font-size: 14px; font-weight: 700; color: #FFD700; text-align: center; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .feature-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .feature-item { background: rgba(255,215,0,0.1); border-radius: 30px; padding: 6px 14px; font-size: 11px; display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.9); }
+        .feature-item i { color: #FFD700; font-size: 12px; }
+        
+        /* FAQ Section */
+        .faq-section { background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.15)); border-radius: 24px; padding: 16px; margin-bottom: 16px; border: 1px solid rgba(255,215,0,0.1); }
+        .faq-title { font-size: 14px; font-weight: 700; color: #FFD700; text-align: center; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .faq-item { margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .faq-question { font-size: 12px; font-weight: 600; color: #fff; display: flex; align-items: center; gap: 8px; margin-bottom: 5px; cursor: pointer; }
+        .faq-question i { color: #FFD700; font-size: 12px; transition: transform 0.3s ease; }
+        .faq-answer { font-size: 11px; color: rgba(255,255,255,0.7); padding-left: 24px; line-height: 1.4; display: none; }
+        .faq-answer.show { display: block; }
+        
+        /* Rank Card */
+        .rank-card { background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2)); backdrop-filter: blur(10px); border-radius: 24px; padding: 16px; margin-bottom: 16px; border: 1px solid rgba(255,215,0,0.2); text-align: center; }
+        .rank-icon { font-size: 48px; margin-bottom: 8px; }
+        .rank-name { font-size: 18px; font-weight: 800; letter-spacing: 1px; }
+        .rank-progress { margin-top: 12px; background: rgba(255,255,255,0.1); border-radius: 30px; height: 8px; overflow: hidden; }
+        .rank-progress-fill { background: linear-gradient(90deg, #FFD700, #FF8C00); height: 100%; border-radius: 30px; transition: width 0.5s ease; width: 0%; }
+        .rank-next { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 8px; }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+        .stat-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; padding: 12px 8px; text-align: center; transition: transform 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .stat-card:hover { transform: translateY(-3px); }
+        .stat-icon { font-size: 24px; margin-bottom: 6px; }
+        .stat-value { font-size: 18px; font-weight: 800; color: #FFD700; }
+        .stat-label { font-size: 10px; color: rgba(255,255,255,0.6); margin-top: 4px; }
+        
+        /* Main Card */
+        .card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; margin-bottom: 16px; }
+        .card-header { padding: 16px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .card-header h2 { font-size: 18px; font-weight: 700; color: #FFD700; }
+        .card-header p { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+        .card-body { padding: 16px; }
+        
+        /* Menu Grid */
+        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .menu-item { background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border-radius: 20px; padding: 16px 10px; text-align: center; cursor: pointer; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05); }
+        .menu-item:hover { transform: translateY(-5px); border-color: rgba(255,215,0,0.4); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .menu-icon { font-size: 28px; margin-bottom: 8px; }
+        .menu-title { font-weight: 600; font-size: 12px; }
+        
+        /* Search Box */
+        .search-box { width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 30px; font-size: 14px; color: #fff; margin-bottom: 16px; transition: all 0.3s ease; }
+        .search-box:focus { outline: none; border-color: #FFD700; background: rgba(255,255,255,0.12); }
+        .search-box::placeholder { color: rgba(255,255,255,0.4); }
+        
+        /* Warning Alert */
+        .warning-alert { background: rgba(255,77,77,0.12); border: 1px solid rgba(255,77,77,0.3); border-radius: 16px; padding: 10px 14px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; font-size: 11px; color: #ff8a8a; }
+        .warning-alert i { font-size: 16px; }
+        
+        /* Floating Help Button */
+        .floating { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 5px 20px rgba(37,211,102,0.4); transition: all 0.3s ease; z-index: 99; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .floating i { font-size: 28px; color: white; }
+        
+        /* Form */
+        .form-group { margin-bottom: 16px; }
+        label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.8); margin-bottom: 6px; display: block; }
+        input, select { width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; font-size: 14px; color: #fff; }
+        input:focus, select:focus { outline: none; border-color: #FFD700; }
+        
+        .btn { width: 100%; padding: 12px; border: none; border-radius: 16px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; margin-top: 10px; }
+        .btn-primary { background: linear-gradient(135deg, #FFD700, #FF8C00); color: #0a0e27; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,215,0,0.3); }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-danger { background: linear-gradient(135deg, #ff4d4d, #cc0000); color: #fff; }
+        
+        /* QRIS */
+        .qris-container { text-align: center; padding: 16px; background: rgba(255,255,255,0.05); border-radius: 20px; margin: 16px 0; }
+        .qris-image { max-width: 100%; border-radius: 16px; background: white; padding: 8px; }
+        
+        /* Alert */
+        .alert { padding: 10px; border-radius: 14px; margin: 12px 0; font-size: 12px; }
+        .alert-success { background: rgba(0,200,83,0.15); border: 1px solid rgba(0,200,83,0.3); color: #69f0ae; }
+        .alert-danger { background: rgba(255,77,77,0.15); border: 1px solid rgba(255,77,77,0.3); color: #ff8a8a; }
+        .alert-info { background: rgba(33,150,243,0.15); border: 1px solid rgba(33,150,243,0.3); color: #80deea; }
+        
+        /* Info Row */
+        .info-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .info-label { font-size: 12px; color: rgba(255,255,255,0.7); }
+        .info-value { font-size: 12px; font-weight: 600; color: #FFD700; }
+        
+        /* Badge */
+        .badge-warning { background: rgba(255,193,7,0.2); color: #ffc107; padding: 4px 10px; border-radius: 20px; font-size: 10px; }
+        
+        /* Loading */
+        .loading { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top: 2px solid #FFD700; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 6px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .hidden { display: none; }
+        
+        /* User Bar */
+        .user-bar { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 50px; padding: 6px 12px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .user-info { display: flex; align-items: center; gap: 10px; }
+        .user-avatar { width: 36px; height: 36px; background: linear-gradient(135deg, #FFD700, #FF8C00); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #0a0e27; }
+        .user-details { font-size: 11px; }
+        .user-name { font-weight: 600; color: #FFD700; }
+        .user-id { font-size: 9px; color: rgba(255,255,255,0.5); }
+        .logout-btn { background: rgba(255,255,255,0.1); border: none; padding: 5px 12px; border-radius: 30px; color: #fff; font-size: 11px; cursor: pointer; }
+        .logout-btn:hover { background: rgba(255,77,77,0.3); }
+        
+        .footer { text-align: center; padding: 16px; font-size: 10px; color: rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body>
+    <div class="bg-particles" id="particles"></div>
+
+    <div class="container" id="app">
+        <!-- Login View -->
+        <div id="loginView">
+            <div class="logo-header">
+                <div class="logo">
+                    <div class="logo-icon">R</div>
+                    <span class="logo-text">RENDZZ OTP</span>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://files.catbox.moe/d3mpx7.jpg" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="https://files.catbox.moe/wtpj5m.jpg" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="https://files.catbox.moe/74zrdn.jpg" alt="Slide 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Penjelasan OTP -->
+            <div class="info-grid">
+                <div class="info-card"><div class="info-icon">📱</div><div class="info-title">Apa Itu OTP?</div><div class="info-desc">One Time Password - Kode verifikasi sekali pakai untuk keamanan akun Anda.</div></div>
+                <div class="info-card"><div class="info-icon">🔒</div><div class="info-title">Keamanan 100%</div><div class="info-desc">Nomor virtual fresh, privasi terjamin, tanpa jejak data pribadi.</div></div>
+                <div class="info-card"><div class="info-icon">⚡</div><div class="info-title">Proses Super Cepat</div><div class="info-desc">OTP masuk dalam hitungan detik, auto detect otomatis.</div></div>
+                <div class="info-card"><div class="info-icon">🛡️</div><div class="info-title">Garansi Refund</div><div class="info-desc">Jika OTP gagal, saldo kembali 100% tanpa syarat.</div></div>
+            </div>
+
+            <!-- Keunggulan -->
+            <div class="feature-section">
+                <div class="feature-title"><i class="fas fa-crown"></i> KENAPA HARUS RENDZZ OTP? <i class="fas fa-crown"></i></div>
+                <div class="feature-list">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> 50+ Aplikasi Support</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Harga Mulai Rp2.000</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Transaksi Aman & Cepat</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Support 24/7 Live Chat</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Auto Cancel & Refund</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> No KTP, No Verifikasi</div>
+                </div>
+            </div>
+
+            <!-- FAQ Section (DI DEPAN) -->
+            <div class="faq-section">
+                <div class="faq-title"><i class="fas fa-question-circle"></i> FREQUENTLY ASKED QUESTIONS <i class="fas fa-question-circle"></i></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Bagaimana cara order OTP?</div><div class="faq-answer">Pilih menu ORDER OTP → Pilih layanan → Pilih negara → Pilih provider → Konfirmasi order. OTP akan otomatis muncul dalam hitungan detik!</div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Apakah nomor virtual aman?</div><div class="faq-answer">100% AMAN! Nomor virtual kami fresh dan tidak tersimpan di database setelah order selesai. Privasi Anda adalah prioritas kami.</div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Bagaimana jika OTP tidak masuk?</div><div class="faq-answer">Tenang! Kami punya garansi refund 100%. Jika OTP tidak masuk dalam waktu 20 menit, Anda bisa cancel order dan saldo akan kembali otomatis.</div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Berapa minimal deposit?</div><div class="faq-answer">Minimal deposit hanya Rp2.000! Bisa topup kapan saja via QRIS, saldo langsung masuk otomatis.</div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Aplikasi apa saja yang support?</div><div class="faq-answer">Kami support 50+ aplikasi: WhatsApp, Telegram, Tiktok, Shopee, Gojek, Grab, Instagram, Twitter, dan masih banyak lagi!</div></div>
+                <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Bagaimana cara deposit?</div><div class="faq-answer">Klik TOPUP SALDO → Masukkan nominal → Buat Deposit → Scan QRIS → Bayar → Saldo Auto Masuk! Panduan lengkap akan muncul saat Anda buat deposit.</div></div>
+            </div>
+
+            <div class="warning-alert">
+                <i class="fas fa-shield-alt"></i>
+                <span><strong>⚠️ PERINGATAN!</strong> Hati-hati dengan link phising mengatasnamakan <strong>RENDZZ OTP</strong>. Admin tidak pernah meminta password/OTP pribadi.</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><h2>🔐 WELCOME BACK</h2><p>Login to your dashboard</p></div>
+                <div class="card-body">
+                    <div class="form-group"><label><i class="fas fa-user"></i> Username</label><input type="text" id="loginUsername" placeholder="Enter username"></div>
+                    <div class="form-group"><label><i class="fas fa-lock"></i> Password</label><input type="password" id="loginPassword" placeholder="Enter password"></div>
+                    <button class="btn btn-primary" onclick="doLogin()"><i class="fas fa-arrow-right-to-bracket"></i> LOGIN</button>
+                    <button class="btn btn-secondary" onclick="showRegister()"><i class="fas fa-user-plus"></i> CREATE ACCOUNT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register View -->
+        <div id="registerView" class="hidden">
+            <div class="logo-header"><div class="logo"><div class="logo-icon">R</div><span class="logo-text">RENDZZ OTP</span></div></div>
+            <div class="swiper mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://files.catbox.moe/d3mpx7.jpg"></div><div class="swiper-slide"><img src="https://files.catbox.moe/wtpj5m.jpg"></div><div class="swiper-slide"><img src="https://files.catbox.moe/74zrdn.jpg"></div></div><div class="swiper-pagination"></div></div>
+            <div class="info-grid"><div class="info-card"><div class="info-icon">📱</div><div class="info-title">Apa Itu OTP?</div><div class="info-desc">One Time Password - Kode verifikasi sekali pakai untuk keamanan akun Anda.</div></div><div class="info-card"><div class="info-icon">🔒</div><div class="info-title">Keamanan 100%</div><div class="info-desc">Nomor virtual fresh, privasi terjamin, tanpa jejak data pribadi.</div></div><div class="info-card"><div class="info-icon">⚡</div><div class="info-title">Proses Super Cepat</div><div class="info-desc">OTP masuk dalam hitungan detik, auto detect otomatis.</div></div><div class="info-card"><div class="info-icon">🛡️</div><div class="info-title">Garansi Refund</div><div class="info-desc">Jika OTP gagal, saldo kembali 100% tanpa syarat.</div></div></div>
+            <div class="feature-section"><div class="feature-title"><i class="fas fa-crown"></i> KENAPA HARUS RENDZZ OTP? <i class="fas fa-crown"></i></div><div class="feature-list"><div class="feature-item"><i class="fas fa-check-circle"></i> 50+ Aplikasi Support</div><div class="feature-item"><i class="fas fa-check-circle"></i> Harga Mulai Rp2.000</div><div class="feature-item"><i class="fas fa-check-circle"></i> Transaksi Aman & Cepat</div><div class="feature-item"><i class="fas fa-check-circle"></i> Support 24/7 Live Chat</div><div class="feature-item"><i class="fas fa-check-circle"></i> Auto Cancel & Refund</div><div class="feature-item"><i class="fas fa-check-circle"></i> No KTP, No Verifikasi</div></div></div>
+            <div class="faq-section"><div class="faq-title"><i class="fas fa-question-circle"></i> FREQUENTLY ASKED QUESTIONS <i class="fas fa-question-circle"></i></div><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Bagaimana cara order OTP?</div><div class="faq-answer">Pilih menu ORDER OTP → Pilih layanan → Pilih negara → Pilih provider → Konfirmasi order. OTP akan otomatis muncul dalam hitungan detik!</div></div><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Apakah nomor virtual aman?</div><div class="faq-answer">100% AMAN! Nomor virtual kami fresh dan tidak tersimpan di database setelah order selesai.</div></div><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Bagaimana jika OTP tidak masuk?</div><div class="faq-answer">Garansi refund 100%! Cancel order dalam 20 menit, saldo kembali otomatis.</div></div><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Berapa minimal deposit?</div><div class="faq-answer">Minimal deposit hanya Rp2.000!</div></div><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><i class="fas fa-chevron-right"></i> Aplikasi apa saja yang support?</div><div class="faq-answer">50+ aplikasi: WhatsApp, Telegram, Tiktok, Shopee, Gojek, Grab, dll.</div></div></div>
+            <div class="warning-alert"><i class="fas fa-shield-alt"></i><span><strong>⚠️ PERINGATAN!</strong> Hati-hati dengan link phising mengatasnamakan <strong>RENDZZ OTP</strong>.</span></div>
+            <div class="card"><div class="card-header"><h2>📝 CREATE ACCOUNT</h2><p>Join RENDZZ OTP now!</p></div><div class="card-body"><div class="form-group"><label>Username</label><input type="text" id="regUsername"></div><div class="form-group"><label>Email</label><input type="email" id="regEmail"></div><div class="form-group"><label>Password</label><input type="password" id="regPassword"></div><div class="form-group"><label>Confirm Password</label><input type="password" id="regConfirmPassword"></div><button class="btn btn-primary" onclick="doRegister()">REGISTER</button><button class="btn btn-secondary" onclick="showLogin()">BACK TO LOGIN</button></div></div>
+        </div>
+
+        <!-- Dashboard View -->
+        <div id="dashboardView" class="hidden">
+            <div class="user-bar"><div class="user-info"><div class="user-avatar" id="userAvatar">R</div><div class="user-details"><div class="user-name" id="userName">RENDZZ</div><div class="user-id" id="userId">ID: loading...</div></div></div><button class="logout-btn" onclick="logout()">LOGOUT</button></div>
+            
+            <div class="swiper mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://files.catbox.moe/d3mpx7.jpg"></div><div class="swiper-slide"><img src="https://files.catbox.moe/wtpj5m.jpg"></div><div class="swiper-slide"><img src="https://files.catbox.moe/74zrdn.jpg"></div></div><div class="swiper-pagination"></div></div>
+
+            <!-- Rank System -->
+            <div class="rank-card" id="rankCard"><div class="rank-icon" id="rankIcon">🥉</div><div class="rank-name" id="rankName">Bronze</div><div class="rank-progress"><div class="rank-progress-fill" id="rankProgress" style="width:0%"></div></div><div class="rank-next" id="rankNext">Next: Silver (Rp10.000)</div></div>
+
+            <!-- Stats -->
+            <div class="stats-grid"><div class="stat-card"><div class="stat-icon">💰</div><div class="stat-value" id="saldoAmount">Rp0</div><div class="stat-label">Saldo</div></div><div class="stat-card"><div class="stat-icon">📱</div><div class="stat-value" id="orderCount">0</div><div class="stat-label">Order</div></div><div class="stat-card"><div class="stat-icon">⭐</div><div class="stat-value" id="totalDeposit">Rp0</div><div class="stat-label">Total Deposit</div></div></div>
+
+            <!-- Menu -->
+            <div class="card"><div class="card-header"><h2>✨ PREMIUM MENU ✨</h2><p>Choose your service</p></div><div class="card-body"><div class="menu-grid"><div class="menu-item" onclick="showServices()"><div class="menu-icon">🛒</div><div class="menu-title">ORDER OTP</div></div><div class="menu-item" onclick="showDeposit()"><div class="menu-icon">💳</div><div class="menu-title">TOPUP SALDO</div></div><div class="menu-item" onclick="showSaldo()"><div class="menu-icon">💰</div><div class="menu-title">CEK SALDO</div></div><div class="menu-item" onclick="showTransactionHistory()"><div class="menu-icon">📜</div><div class="menu-title">HISTORY</div></div><div class="menu-item" onclick="showVipPromo()"><div class="menu-icon">🏆</div><div class="menu-title">VIP PROMO</div></div><div class="menu-item" onclick="showBantuan()"><div class="menu-icon">❓</div><div class="menu-title">BANTUAN</div></div></div></div></div>
+            
+            <!-- Jaminan Transaksi Aman -->
+            <div class="feature-section"><div class="feature-title"><i class="fas fa-shield-alt"></i> JAMINAN TRANSAKSI AMAN <i class="fas fa-shield-alt"></i></div><div class="feature-list"><div class="feature-item"><i class="fas fa-lock"></i> Enkripsi End-to-End</div><div class="feature-item"><i class="fas fa-history"></i> Riwayat Transparan</div><div class="feature-item"><i class="fas fa-tachometer-alt"></i> Proses Auto Detect</div><div class="feature-item"><i class="fas fa-undo-alt"></i> Refund Garansi 100%</div><div class="feature-item"><i class="fas fa-headset"></i> Support 24/7</div><div class="feature-item"><i class="fas fa-database"></i> Data Tersimpan Aman</div></div></div>
+        </div>
+
+        <!-- Deposit View -->
+        <div id="depositView" class="hidden">
+            <div class="card"><div class="card-header"><h2>💳 TOPUP SALDO</h2><p>Minimal Rp2.000</p></div>
+            <div class="card-body">
+                <div class="form-group"><label>💰 Nominal Deposit</label><input type="number" id="depositAmount" placeholder="Contoh: 50000" min="2000"></div>
+                <button class="btn btn-primary" onclick="createDeposit()">BUAT DEPOSIT</button>
+                <button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button>
+                <div id="depositResult"></div>
+            </div></div>
+        </div>
+
+        <!-- QRIS View (PANDUAN CARA BAYAR ADA DI SINI) -->
+        <div id="qrisView" class="hidden">
+            <div class="card"><div class="card-header"><h2>📱 SCAN QRIS</h2><p>Bayar untuk topup saldo</p></div>
+            <div class="card-body">
+                <!-- PANDUAN CARA BAYAR - KHUSUS DI SINI -->
+                <div class="guide-section">
+                    <div class="guide-title"><i class="fas fa-credit-card"></i> 📌 PANDUAN CARA BAYAR 📌 <i class="fas fa-credit-card"></i></div>
+                    <div class="guide-steps">
+                        <div class="step-item"><div class="step-number">1</div><div class="step-text"><i class="fas fa-hand-pointer"></i> <strong>Scan QRIS</strong> di bawah ini</div></div>
+                        <div class="step-item"><div class="step-number">2</div><div class="step-text"><i class="fas fa-mobile-alt"></i> Buka <strong>OVO / DANA / GoPay / ShopeePay / Livin'</strong></div></div>
+                        <div class="step-item"><div class="step-number">3</div><div class="step-text"><i class="fas fa-qrcode"></i> Pilih <strong>Scan QRIS</strong> → Arahkan kamera ke QR Code</div></div>
+                        <div class="step-item"><div class="step-number">4</div><div class="step-text"><i class="fas fa-check-circle"></i> <strong>Konfirmasi pembayaran</strong> di aplikasi</div></div>
+                        <div class="step-item"><div class="step-number">5</div><div class="step-text"><i class="fas fa-sync-alt"></i> Klik <strong>CEK STATUS</strong> → Saldo <strong>AUTO MASUK</strong>!</div></div>
+                    </div>
+                    <div style="margin-top: 12px; text-align: center; font-size: 11px; color: #4caf50;"><i class="fas fa-clock"></i> Proses bayar < 1 menit, saldo langsung bertambah!</div>
+                </div>
+                
+                <div id="qrisInfo"></div>
+                <div class="qris-container" id="qrisContainer"></div>
+                <button class="btn btn-primary" onclick="checkDepositStatus()">CEK STATUS</button>
+                <button class="btn btn-danger" onclick="cancelDeposit()">BATAL</button>
+                <button class="btn btn-secondary" onclick="backToDashboard()">DASHBOARD</button>
+            </div></div>
+        </div>
+
+        <!-- Services, Countries, Providers, Order Confirm, Order Result, Saldo, History, VIP Promo, Bantuan Views -->
+        <div id="servicesView" class="hidden"><div class="card"><div class="card-header"><h2>📱 LAYANAN OTP</h2><p>Pilih layanan</p></div><div class="card-body"><div id="servicesList" class="menu-grid"></div><button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button></div></div></div>
+        <div id="countriesView" class="hidden"><div class="card"><div class="card-header"><h2>🌍 PILIH NEGARA</h2><p>Cari & pilih negara tujuan</p></div><div class="card-body"><input type="text" class="search-box" id="countrySearch" placeholder="🔍 Cari negara..." onkeyup="filterCountries()"><div id="countriesList" class="menu-grid"></div><button class="btn btn-secondary" onclick="showServices()">KEMBALI</button></div></div></div>
+        <div id="providersView" class="hidden"><div class="card"><div class="card-header"><h2>📡 PILIH PROVIDER</h2><p>Pilih provider & harga</p></div><div class="card-body"><div id="providersList" class="menu-grid"></div><button class="btn btn-secondary" onclick="showCountries()">KEMBALI</button></div></div></div>
+        <div id="orderConfirmView" class="hidden"><div class="card"><div class="card-header"><h2>📝 KONFIRMASI ORDER</h2><p>Pastikan data benar</p></div><div class="card-body"><div id="orderDetail"></div><button class="btn btn-primary" onclick="confirmOrder()">KONFIRMASI</button><button class="btn btn-secondary" onclick="showProviders()">KEMBALI</button></div></div></div>
+        <div id="orderResultView" class="hidden"><div class="card"><div class="card-header"><h2>✅ ORDER BERHASIL</h2><p>Menunggu OTP...</p></div><div class="card-body"><div id="orderResult"></div><button class="btn btn-primary" onclick="cekStatusOrder()">CEK STATUS</button><button class="btn btn-danger" onclick="cancelOrder()">CANCEL</button><button class="btn btn-secondary" onclick="backToDashboard()">DASHBOARD</button></div></div></div>
+        <div id="saldoView" class="hidden"><div class="card"><div class="card-header"><h2>💰 CEK SALDO</h2><p>Informasi saldo</p></div><div class="card-body"><div id="saldoInfo"></div><button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button></div></div></div>
+        <div id="historyView" class="hidden"><div class="card"><div class="card-header"><h2>📜 HISTORY</h2><p>Riwayat transaksi</p></div><div class="card-body"><div id="historyList"></div><button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button></div></div></div>
+        <div id="vipPromoView" class="hidden"><div class="card"><div class="card-header"><h2>🏆 VIP PROMO</h2><p>Special offers!</p></div><div class="card-body"><div class="alert alert-info"><i class="fas fa-gift"></i> <strong>PROMO SPESIAL!</strong></div><div class="info-row"><span class="info-label">✨ Deposit Pertama</span><span class="info-value">Bonus +5%</span></div><div class="info-row"><span class="info-label">👥 Ajak Teman</span><span class="info-value">Dapat 10% Saldo</span></div><div class="info-row"><span class="info-label">💰 Topup >100K</span><span class="info-value">Free 1x Order</span></div><button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button></div></div></div>
+        <div id="bantuanView" class="hidden"><div class="card"><div class="card-header"><h2>❓ BANTUAN</h2><p>Panduan lengkap</p></div><div class="card-body"><div class="info-row"><span class="info-label">📱 Cara Order OTP:</span></div><div style="margin-bottom:16px;font-size:12px;color:rgba(255,255,255,0.7);">1. Pilih layanan<br>2. Pilih negara<br>3. Pilih provider<br>4. Konfirmasi order</div><div class="info-row"><span class="info-label">💳 Cara Deposit:</span></div><div style="margin-bottom:16px;font-size:12px;color:rgba(255,255,255,0.7);">1. Klik Topup Saldo<br>2. Masukkan nominal<br>3. Scan QRIS & bayar<br>4. Saldo auto bertambah</div><div class="info-row"><span class="info-label">⚡ Fitur:</span></div><div style="font-size:12px;color:rgba(255,255,255,0.7);">• OTP auto cek tiap 10 detik<br>• Auto cancel 20 menit<br>• Garansi refund 100%</div><button class="btn btn-secondary" onclick="backToDashboard()">KEMBALI</button></div></div></div>
+
+        <div class="footer">© 2024 RENDZZ OTP | Premium Virtual Number Service | Transaksi Aman & Terpercaya</div>
+    </div>
+
+    <!-- Floating Help Button (Live Chat) -->
+    <div class="floating" onclick="openTawk()"><i class="fas fa-comment-dots"></i></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // ================= API KEY =================
+        const API_KEY = 'fp_f0c5c50cf7b840eb97fc3c243f8393656adae534fb521eea';
+        const API_URL = 'https://otpfastmurah.orderhostid.my.id';
+        const MARKUP = 2000;
+        const ADMIN_PASSWORD = '3333';
+
+        // Particles effect
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.width = Math.random() * 6 + 2 + 'px';
+                p.style.height = p.style.width;
+                p.style.left = Math.random() * 100 + '%';
+                p.style.top = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 15 + 's';
+                p.style.animationDuration = 10 + Math.random() * 10 + 's';
+                container.appendChild(p);
+            }
+        }
+        createParticles();
+
+        // Swiper
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0, centeredSlides: true, autoplay: { delay: 3000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true }, loop: true
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.parentElement.querySelector('.faq-answer');
+            answer.classList.toggle('show');
+            const icon = element.querySelector('i');
+            if (answer.classList.contains('show')) {
+                icon.style.transform = 'rotate(90deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        let currentUser = null;
+        let currentDepositId = null;
+        let currentOrderId = null;
+        let currentOrderInfo = {};
+        let intervalChecker = null;
+        let servicesCache = null;
+        let countriesCache = null;
+        let allCountries = [];
+        let selectedService = null;
+        let selectedCountry = null;
+        let selectedProvider = null;
+        let userSaldo = 0;
+        let userOrders = [];
+        let totalDeposit = 0;
+
+        // Rank System
+        const rankLevels = [
+            { name: 'Bronze', min: 0, icon: '🥉', next: 10000 },
+            { name: 'Silver', min: 10000, icon: '🥈', next: 50000 },
+            { name: 'Gold', min: 50000, icon: '🥇', next: 200000 },
+            { name: 'Platinum', min: 200000, icon: '💎', next: 500000 },
+            { name: 'Master', min: 500000, icon: '👑', next: null }
+        ];
+
+        function getRank(total) {
+            for (let i = rankLevels.length - 1; i >= 0; i--) {
+                if (total >= rankLevels[i].min) return rankLevels[i];
+            }
+            return rankLevels[0];
+        }
+
+        function updateRankDisplay() {
+            const rank = getRank(totalDeposit);
+            document.getElementById('rankIcon').innerHTML = rank.icon;
+            document.getElementById('rankName').innerHTML = rank.name;
+            if (rank.next) {
+                const nextRank = rankLevels[rankLevels.indexOf(rank) + 1];
+                const progress = (totalDeposit / rank.next) * 100;
+                document.getElementById('rankProgress').style.width = Math.min(progress, 100) + '%';
+                document.getElementById('rankNext').innerHTML = `Next: ${nextRank.name} (${formatRupiah(rank.next)})`;
+            } else {
+                document.getElementById('rankProgress').style.width = '100%';
+                document.getElementById('rankNext').innerHTML = `🏆 MAX LEVEL - MASTER 🏆`;
+            }
+        }
+
+        function formatRupiah(angka) { return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(angka); }
+
+        function loadUsers() {
+            const users = localStorage.getItem('rendzz_users');
+            if (!users) {
+                const defaultUsers = { 'admin': { username: 'admin', password: ADMIN_PASSWORD, email: 'admin@rendzz.com', saldo: 100000, totalDeposit: 0, orders: [], joined: new Date().toISOString() } };
+                localStorage.setItem('rendzz_users', JSON.stringify(defaultUsers));
+                return defaultUsers;
+            }
+            return JSON.parse(users);
+        }
+
+        function saveUsers(users) { localStorage.setItem('rendzz_users', JSON.stringify(users)); }
+
+        function doLogin() {
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            if (!username || !password) { showAlert('loginView', 'Isi username & password!', 'danger'); return; }
+            const users = loadUsers();
+            if (users[username] && users[username].password === password) {
+                currentUser = users[username];
+                currentUser.username = username;
+                userSaldo = currentUser.saldo || 0;
+                userOrders = currentUser.orders || [];
+                totalDeposit = currentUser.totalDeposit || 0;
+                localStorage.setItem('rendzz_current_user', JSON.stringify({ username: username }));
+                updateDashboardUI();
+                showView('dashboardView');
+            } else { showAlert('loginView', 'Username atau password salah!', 'danger'); }
+        }
+
+        function doRegister() {
+            const username = document.getElementById('regUsername').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const password = document.getElementById('regPassword').value;
+            const confirm = document.getElementById('regConfirmPassword').value;
+            if (!username || !email || !password) { showAlert('registerView', 'Isi semua field!', 'danger'); return; }
+            if (password !== confirm) { showAlert('registerView', 'Password tidak cocok!', 'danger'); return; }
+            const users = loadUsers();
+            if (users[username]) { showAlert('registerView', 'Username sudah terdaftar!', 'danger'); return; }
+            users[username] = { username, password, email, saldo: 0, totalDeposit: 0, orders: [], joined: new Date().toISOString() };
+            saveUsers(users);
+            showAlert('registerView', 'Register berhasil! Silakan login.', 'success');
+            setTimeout(() => showLogin(), 2000);
+        }
+
+        function logout() { localStorage.removeItem('rendzz_current_user'); currentUser = null; if (intervalChecker) clearInterval(intervalChecker); showLogin(); }
+
+        function checkAutoLogin() {
+            const savedUser = localStorage.getItem('rendzz_current_user');
+            if (savedUser) {
+                const { username } = JSON.parse(savedUser);
+                const users = loadUsers();
+                if (users[username]) {
+                    currentUser = users[username];
+                    currentUser.username = username;
+                    userSaldo = currentUser.saldo || 0;
+                    userOrders = currentUser.orders || [];
+                    totalDeposit = currentUser.totalDeposit || 0;
+                    updateDashboardUI();
+                    showView('dashboardView');
+                    return true;
+                }
+            }
+            showLogin(); return false;
+        }
+
+        function updateDashboardUI() {
+            if (!currentUser) return;
+            document.getElementById('userName').innerHTML = currentUser.username.toUpperCase();
+            document.getElementById('userId').innerHTML = `ID: ${currentUser.username.substring(0,8)}...`;
+            document.getElementById('userAvatar').innerHTML = currentUser.username.charAt(0).toUpperCase();
+            document.getElementById('saldoAmount').innerHTML = formatRupiah(userSaldo);
+            document.getElementById('orderCount').innerHTML = userOrders.length;
+            document.getElementById('totalDeposit').innerHTML = formatRupiah(totalDeposit);
+            updateRankDisplay();
+        }
+
+        function showAlert(viewId, message, type) {
+            const view = document.getElementById(viewId);
+            const cardBody = view.querySelector('.card-body');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.innerHTML = message;
+            const oldAlerts = cardBody.querySelectorAll('.alert');
+            oldAlerts.forEach(a => a.remove());
+            cardBody.insertBefore(alertDiv, cardBody.firstChild);
+            setTimeout(() => alertDiv.remove(), 3000);
+        }
+
+        function showView(viewId) {
+            const views = ['loginView', 'registerView', 'dashboardView', 'depositView', 'qrisView', 'servicesView', 'countriesView', 'providersView', 'orderConfirmView', 'orderResultView', 'saldoView', 'historyView', 'vipPromoView', 'bantuanView'];
+            views.forEach(v => { const el = document.getElementById(v); if (el) el.classList.add('hidden'); });
+            document.getElementById(viewId).classList.remove('hidden');
+            if (viewId === 'dashboardView' && swiper) setTimeout(() => swiper.update(), 100);
+        }
+
+        function showLogin() { showView('loginView'); }
+        function showRegister() { showView('registerView'); }
+        function backToDashboard() { if (intervalChecker) clearInterval(intervalChecker); updateDashboardUI(); showView('dashboardView'); }
+        function showDeposit() { showView('depositView'); document.getElementById('depositAmount').value = ''; document.getElementById('depositResult').innerHTML = ''; }
+        function showSaldo() { document.getElementById('saldoInfo').innerHTML = `<div class="info-row"><span class="info-label">👤 Username</span><span class="info-value">${currentUser?.username || '-'}</span></div><div class="info-row"><span class="info-label">💰 Saldo</span><span class="info-value">${formatRupiah(userSaldo)}</span></div><div class="info-row"><span class="info-label">📊 Total Deposit</span><span class="info-value">${formatRupiah(totalDeposit)}</span></div><div class="info-row"><span class="info-label">⭐ Rank</span><span class="info-value">${getRank(totalDeposit).name} ${getRank(totalDeposit).icon}</span></div>`; showView('saldoView'); }
+        function showTransactionHistory() { document.getElementById('historyList').innerHTML = userOrders.length === 0 ? '<div class="alert alert-info">Belum ada transaksi</div>' : userOrders.map(order => `<div class="info-row"><span class="info-label">${order.date || 'Order'}</span><span class="info-value">${formatRupiah(order.amount || 0)}</span></div>`).join(''); showView('historyView'); }
+        function showVipPromo() { showView('vipPromoView'); }
+        function showBantuan() { showView('bantuanView'); }
+        function openTawk() { if (typeof Tawk_API !== 'undefined') Tawk_API.toggle(); }
+
+        // Deposit
+        async function createDeposit() {
+            const amount = parseInt(document.getElementById('depositAmount').value);
+            if (isNaN(amount) || amount < 2000) { document.getElementById('depositResult').innerHTML = '<div class="alert alert-danger">❌ Minimal deposit Rp2.000!</div>'; return; }
+            document.getElementById('depositResult').innerHTML = '<div class="alert alert-info"><span class="loading"></span> Membuat deposit...</div>';
+            try {
+                const response = await fetch(`${API_URL}/api/v1/deposit/create`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY }, body: JSON.stringify({ amount }) });
+                const data = await response.json();
+                if (data.success && data.deposit) {
+                    currentDepositId = data.deposit.id;
+                    document.getElementById('qrisInfo').innerHTML = `<div class="info-row"><span class="info-label">📌 ID Deposit</span><span class="info-value">${currentDepositId}</span></div><div class="info-row"><span class="info-label">💰 Nominal</span><span class="info-value">${formatRupiah(data.deposit.amount)}</span></div><div class="info-row"><span class="info-label">🧾 Total Bayar</span><span class="info-value">${formatRupiah(data.deposit.total_payment)}</span></div><div class="info-row"><span class="info-label">⏰ Berlaku</span><span class="info-value">5 menit</span></div>`;
+                    document.getElementById('qrisContainer').innerHTML = `<img src="${data.deposit.qr_image}" class="qris-image" alt="QRIS"><p style="margin-top:10px;font-size:11px;color:rgba(255,255,255,0.5);">Scan QRIS untuk bayar</p>`;
+                    showView('qrisView');
+                    if (intervalChecker) clearInterval(intervalChecker);
+                    intervalChecker = setInterval(checkDepositStatus, 5000);
+                } else { document.getElementById('depositResult').innerHTML = `<div class="alert alert-danger">❌ Gagal: ${data.error || 'Unknown'}</div>`; }
+            } catch (error) { document.getElementById('depositResult').innerHTML = `<div class="alert alert-danger">❌ Error: ${error.message}</div>`; }
+        }
+
+        async function checkDepositStatus() {
+            if (!currentDepositId) return;
+            try {
+                const response = await fetch(`${API_URL}/api/v1/deposit/status/${currentDepositId}`, { headers: { 'x-api-key': API_KEY } });
+                const data = await response.json();
+                if (data.success && data.status === 'success') {
+                    if (intervalChecker) clearInterval(intervalChecker);
+                    const depositAmount = parseInt(document.getElementById('depositAmount').value) || 0;
+                    userSaldo += depositAmount;
+                    totalDeposit += depositAmount;
+                    if (currentUser) {
+                        currentUser.saldo = userSaldo;
+                        currentUser.totalDeposit = totalDeposit;
+                        const users = loadUsers();
+                        users[currentUser.username].saldo = userSaldo;
+                        users[currentUser.username].totalDeposit = totalDeposit;
+                        saveUsers(users);
+                    }
+                    document.getElementById('qrisInfo').innerHTML = `<div class="alert alert-success">✅ Deposit ${formatRupiah(depositAmount)} BERHASIL!<br>💰 Saldo sekarang: ${formatRupiah(userSaldo)}</div>`;
+                    document.getElementById('qrisContainer').innerHTML = '';
+                    setTimeout(() => backToDashboard(), 3000);
+                } else if (data.status === 'expired' || data.status === 'cancelled') {
+                    if (intervalChecker) clearInterval(intervalChecker);
+                    document.getElementById('qrisInfo').innerHTML = '<div class="alert alert-danger">⏰ Deposit expired!</div>';
+                }
+            } catch (error) { console.error(error); }
+        }
+
+        async function cancelDeposit() {
+            if (!currentDepositId) return;
+            try {
+                await fetch(`${API_URL}/api/v1/deposit/cancel`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY }, body: JSON.stringify({ deposit_id: currentDepositId }) });
+                if (intervalChecker) clearInterval(intervalChecker);
+                document.getElementById('qrisInfo').innerHTML = '<div class="alert alert-danger">❌ Deposit dibatalkan!</div>';
+                setTimeout(() => backToDashboard(), 2000);
+            } catch (error) { console.error(error); }
+        }
+
+        // Services
+        async function showServices() {
+            showView('servicesView');
+            document.getElementById('servicesList').innerHTML = '<div class="alert alert-info"><span class="loading"></span> Memuat...</div>';
+            try {
+                if (!servicesCache) {
+                    const res = await fetch(`${API_URL}/api/v1/s2/nokos/services?server=s2`, { headers: { 'x-api-key': API_KEY } });
+                    const data = await res.json();
+                    if (data.success && data.data) servicesCache = data.data;
+                }
+                if (servicesCache && servicesCache.length) {
+                    let html = '';
+                    servicesCache.forEach(s => { html += `<div class="menu-item" onclick="selectService('${s.id}', '${s.name.replace(/'/g, "\\'")}')"><div class="menu-icon">📱</div><div class="menu-title">${s.name}</div></div>`; });
+                    document.getElementById('servicesList').innerHTML = html;
+                } else { document.getElementById('servicesList').innerHTML = '<div class="alert alert-danger">Tidak ada layanan</div>'; }
+            } catch (error) { document.getElementById('servicesList').innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`; }
+        }
+
+        function selectService(id, name) { selectedService = { id, name }; showCountries(); }
+
+        // Countries with Search
+        async function showCountries() {
+            showView('countriesView');
+            document.getElementById('countriesList').innerHTML = '<div class="alert alert-info"><span class="loading"></span> Memuat negara...</div>';
+            try {
+                if (!countriesCache) {
+                    const res = await fetch(`${API_URL}/api/v1/s2/nokos/countries?server=s2`, { headers: { 'x-api-key': API_KEY } });
+                    const data = await res.json();
+                    if (data.success && data.data) { countriesCache = data.data; allCountries = [...countriesCache]; }
+                }
+                renderCountries(allCountries);
+                document.getElementById('countrySearch').value = '';
+            } catch (error) { document.getElementById('countriesList').innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`; }
+        }
+
+        function renderCountries(countries) {
+            if (countries && countries.length) {
+                let html = '';
+                countries.forEach(c => { html += `<div class="menu-item" onclick="selectCountry('${c.number_id}', '${c.name.replace(/'/g, "\\'")}')"><div class="menu-icon">🌍</div><div class="menu-title">${c.name}</div></div>`; });
+                document.getElementById('countriesList').innerHTML = html;
+            } else { document.getElementById('countriesList').innerHTML = '<div class="alert alert-danger">Negara tidak ditemukan</div>'; }
+        }
+
+        function filterCountries() {
+            const keyword = document.getElementById('countrySearch').value.toLowerCase();
+            const filtered = countriesCache.filter(c => c.name.toLowerCase().includes(keyword));
+            renderCountries(filtered);
+        }
+
+        function selectCountry(id, name) { selectedCountry = { id, name }; showProviders(); }
+
+        // Providers
+        async function showProviders() {
+            showView('providersView');
+            document.getElementById('providersList').innerHTML = '<div class="alert alert-info"><span class="loading"></span> Memuat provider...</div>';
+            try {
+                const res = await fetch(`${API_URL}/api/v1/s2/nokos/numbers?server=s2&service_code=${selectedService.id}&country_id=${selectedCountry.id}`, { headers: { 'x-api-key': API_KEY } });
+                const data = await res.json();
+                if (data.success && data.data && data.data.length) {
+                    let html = '';
+                    data.data.forEach(p => { const hargaJual = p.price + MARKUP; html += `<div class="menu-item" onclick="selectProvider('${p.provider_id || ''}', ${p.price}, ${hargaJual}, '${(p.label || 'Provider').replace(/'/g, "\\'")}')"><div class="menu-icon">📡</div><div class="menu-title">${p.label || 'Provider'}</div><div style="font-size:11px;color:#FFD700;">${formatRupiah(hargaJual)}</div><div style="font-size:10px;">Stok: ${p.count || '?'}</div></div>`; });
+                    document.getElementById('providersList').innerHTML = html;
+                } else { document.getElementById('providersList').innerHTML = '<div class="alert alert-danger">Tidak ada provider</div>'; }
+            } catch (error) { document.getElementById('providersList').innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`; }
+        }
+
+        function selectProvider(id, priceOrg, priceMarkup, label) { selectedProvider = { id, priceOriginal: priceOrg, priceWithMarkup: priceMarkup, label }; showOrderConfirm(); }
+
+        function showOrderConfirm() {
+            document.getElementById('orderDetail').innerHTML = `<div class="info-row"><span class="info-label">🖥️ Layanan</span><span class="info-value">${selectedService.name}</span></div><div class="info-row"><span class="info-label">🌍 Negara</span><span class="info-value">${selectedCountry.name}</span></div><div class="info-row"><span class="info-label">📡 Provider</span><span class="info-value">${selectedProvider.label}</span></div><div class="info-row"><span class="info-label">💰 Harga Asli</span><span class="info-value">${formatRupiah(selectedProvider.priceOriginal)}</span></div><div class="info-row"><span class="info-label">➕ Biaya</span><span class="info-value">${formatRupiah(MARKUP)}</span></div><div class="info-row" style="border-bottom:2px solid #FFD700;"><span class="info-label">✅ TOTAL</span><span class="info-value" style="color:#FFD700;">${formatRupiah(selectedProvider.priceWithMarkup)}</span></div><div class="info-row"><span class="info-label">💵 Saldo</span><span class="info-value">${formatRupiah(userSaldo)}</span></div>`;
+            showView('orderConfirmView');
+        }
+
+        async function confirmOrder() {
+            if (userSaldo < selectedProvider.priceWithMarkup) { document.getElementById('orderDetail').innerHTML += `<div class="alert alert-danger">❌ Saldo tidak cukup!</div>`; return; }
+            document.getElementById('orderDetail').innerHTML += `<div class="alert alert-info"><span class="loading"></span> Memproses...</div>`;
+            try {
+                const res = await fetch(`${API_URL}/api/v1/s2/nokos/order`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY }, body: JSON.stringify({ service_code: selectedService.id, service_name: selectedService.name, country_id: selectedCountry.id, country_name: selectedCountry.name, provider_id: selectedProvider.id || "", price_original: selectedProvider.priceOriginal, server: 's2' }) });
+                const data = await res.json();
+                if (data.success && data.order) {
+                    userSaldo -= selectedProvider.priceWithMarkup;
+                    if (currentUser) {
+                        currentUser.saldo = userSaldo;
+                        currentUser.orders.push({ date: new Date().toLocaleString(), amount: selectedProvider.priceWithMarkup, service: selectedService.name });
+                        const users = loadUsers();
+                        users[currentUser.username].saldo = userSaldo;
+                        users[currentUser.username].orders = currentUser.orders;
+                        saveUsers(users);
+                    }
+                    currentOrderId = data.order.id;
+                    currentOrderInfo = { orderId: data.order.id, phone: data.order.phone_number, price: data.order.price };
+                    document.getElementById('orderResult').innerHTML = `<div class="info-row"><span class="info-label">🆔 Order ID</span><span class="info-value">${data.order.id}</span></div><div class="info-row"><span class="info-label">📞 Nomor</span><span class="info-value">${data.order.phone_number}</span></div><div class="info-row"><span class="info-label">💰 Harga</span><span class="info-value">${formatRupiah(data.order.price)}</span></div><div class="info-row"><span class="info-label">⏳ Status</span><span class="info-value"><span class="badge-warning" style="padding:4px 10px;border-radius:20px;">MENUNGGU OTP</span></span></div>`;
+                    showView('orderResultView');
+                    if (intervalChecker) clearInterval(intervalChecker);
+                    intervalChecker = setInterval(cekStatusOrder, 10000);
+                } else { document.getElementById('orderDetail').innerHTML += `<div class="alert alert-danger">❌ Gagal: ${data.error}</div>`; }
+            } catch (error) { document.getElementById('orderDetail').innerHTML += `<div class="alert alert-danger">❌ Error: ${error.message}</div>`; }
+        }
+
+        async function cekStatusOrder() {
+            if (!currentOrderId) return;
+            try {
+                const res = await fetch(`${API_URL}/api/v1/s2/nokos/status?order_id=${currentOrderId}`, { headers: { 'x-api-key': API_KEY } });
+                const data = await res.json();
+                if (data.success && data.data) {
+                    const otpCode = data.data.otp_code;
+                    const status = data.data.status;
+                    if ((status === 'received' || status === 'completed' || status === 'success') && otpCode) {
+                        if (intervalChecker) clearInterval(intervalChecker);
+                        document.getElementById('orderResult').innerHTML = `<div class="info-row"><span class="info-label">🆔 Order ID</span><span class="info-value">${currentOrderId}</span></div><div class="info-row"><span class="info-label">📞 Nomor</span><span class="info-value">${currentOrderInfo.phone || 'Tersembunyi'}</span></div><div class="alert alert-success">🎉 <b>OTP DITERIMA!</b><br>🔑 Kode OTP: <code style="font-size:22px;font-weight:bold;color:#FFD700;">${otpCode}</code></div>`;
+                    } else if (status === 'canceled' || status === 'expired') { if (intervalChecker) clearInterval(intervalChecker); document.getElementById('orderResult').innerHTML += `<div class="alert alert-danger">⚠️ Order expired/cancel</div>`; }
+                }
+            } catch (error) { console.error(error); }
+        }
+
+        async function cancelOrder() {
+            if (!currentOrderId) return;
+            try {
+                await fetch(`${API_URL}/api/v1/s2/nokos/cancel`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY }, body: JSON.stringify({ order_id: currentOrderId }) });
+                if (intervalChecker) clearInterval(intervalChecker);
+                document.getElementById('orderResult').innerHTML += `<div class="alert alert-danger">❌ Order dibatalkan</div>`;
+            } catch (error) { console.error(error); }
+        }
+
+        checkAutoLogin();
+    </script>
+</body>
+</html>
